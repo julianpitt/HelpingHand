@@ -1,4 +1,4 @@
-# SAFI Fiesta Events EMS
+# Helping Hand
 
 ## Official Documentation
 
