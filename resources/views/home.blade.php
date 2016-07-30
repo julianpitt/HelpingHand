@@ -2,26 +2,30 @@
 @section('content')
 
     <section id="section_header">
-        <div class="table-wrapper">
+        <nav class="nav">
+            <button class="btn">Login</button>
+            <a href="/register" class="btn">Sign up</a>
+        </nav>
+        <div class="table-wrapper container">
             <div class="table-inner">
                 <div class="table-center">
                     {{--<img src="{{ FilePath::img('Helpin2.jpg') }}"/>--}}
-                    <h1>One World, Many Problems<br/>
-                        <small>I love lamp</small>
+                    <h1 class="banner_title">One World, Many Problems<br/>
+                        <small>Lead the change</small>
                     </h1>
-                    <div id="div_userHelpContainer">
-                        <a href="#map_section">
-                            <div id="div_HowDoIHelp" class="col-lg-6 col-md-6 col-sm-12 text-center">
+                    <div id="div_userHelpContainer row">
+                        <div id="div_HowDoIHelp" class="col-lg-6 col-md-6 col-xs-6 text-center">
+                            <a href="#map_section" class="banner-btn">
                                 <img src="{{ FilePath::img('Shape 4.png') }}"/>
                                 <h3>Show me how I can help.</h3>
-                            </div>
-                        </a>
-                        <a href="#causes">
-                            <div id="div_IKnowHowToHelp" class="col-lg-6 col-md-6 col-sm-12 text-center">
+                            </a>
+                        </div>
+                        <div id="div_IKnowHowToHelp" class="col-lg-6 col-md-6 col-xs-6 text-center">
+                            <a href="#causes" class="banner-btn">
                                 <img src="{{ FilePath::img('Shape 3.png') }}"/>
                                 <h3>I know how to help.</h3>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,22 +36,37 @@
         <div class="map_filters affix-scroll">
             <ul>
                 <li>
-                    <button class="btn water">Water</button>
+                    <div class="btn-filter">
+                        <input type="checkbox" id="water"/><label for="water" class="btn water">Water</label>
+                    </div>
                 </li>
                 <li>
-                    <button class="btn gas">Gas</button>
+                    <div class="btn-filter">
+                        <input type="checkbox" id="gas"/><label for="gas" class="btn gas">Gas</label>
+                    </div>
                 </li>
                 <li>
-                    <button class="btn electricity">Electricity</button>
+                    <div class="btn-filter">
+                        <input type="checkbox" id="electricity"/><label for="electricity" class="btn electricity">Electricity</label>
+                    </div>
                 </li>
                 <li>
-                    <button class="btn homelessness">Homelessness</button>
+                    <div class="btn-filter">
+                        <input type="checkbox" id="homelessness"/><label for="homelessness" class="btn homelessness">Homelessness</label>
+                    </div>
                 </li>
             </ul>
         </div>
         <div class="map_bounds">
             <div id="map"></div>
-            <div id="problems" class="draggable"></div>
+            <div id="map_details">
+                <div class="map_details__close-btn">
+
+                </div>
+                <div class="map_details__content">
+
+                </div>
+            </div>
         </div>
     </section>
 

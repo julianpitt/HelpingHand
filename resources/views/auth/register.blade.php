@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.subsites')
 @section('content')
 <div class="container">
     <div class="row">

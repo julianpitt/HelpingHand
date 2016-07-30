@@ -1,5 +1,7 @@
 //Bootstrap overrides
 // Basics of a navbar
+$colour-primary:                  #249158;
+
 $navbar-height:                    60px;
 
 $navbar-border-radius:             0;
@@ -33,10 +35,11 @@ $admin-sidemenu-bg: #363943;
 $admin-sidemenu-highlight: #35878c;
 
 @mixin water() {
-  background-color: rgb(45, 73, 132);
+  background-color: #2E4A82;
   color: white;
   &:hover {
     color: white;
+    background-color: darken(#2E4A82, 6.5%);
   }
 }
 @mixin gas() {
@@ -44,6 +47,7 @@ $admin-sidemenu-highlight: #35878c;
   color: white;
   &:hover {
     color: white;
+    background-color: darken(#804143, 6.5%);
   }
 }
 @mixin electricity() {
@@ -51,6 +55,7 @@ $admin-sidemenu-highlight: #35878c;
   color: black;
   &:hover {
     color: black;
+    background-color: darken(#fff748, 6.5%);
   }
 }
 @mixin homelessness() {
@@ -58,5 +63,6 @@ $admin-sidemenu-highlight: #35878c;
   color: white;
   &:hover {
     color: white;
+    background-color: darken(#408046, 6.5%);
   }
 }

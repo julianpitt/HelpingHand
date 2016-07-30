@@ -1,0 +1,34 @@
+#section_header {
+  nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    .btn {
+      background-color: transparent;
+      width: auto;
+      font-size: 16px;
+      border: 2px solid white;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      &:hover {
+        background-color: white;
+        color: $colour-primary;
+      }
+    }
+  }
+  .banner_title {
+    margin-bottom: 140px;
+    display: block;
+  }
+  .banner-btn {
+    margin-top: 20px;
+    border: 4px solid white;
+    display: block;
+    margin: auto;
+    color: white;
+    font-size: 0.6em;
+    max-width: 340px;
+    padding: 20px;
+  }
+}

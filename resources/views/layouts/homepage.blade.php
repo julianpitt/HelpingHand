@@ -2,7 +2,6 @@
 
     {{--Top nav--}}
     <header>
-
     </header>
 
     <main>

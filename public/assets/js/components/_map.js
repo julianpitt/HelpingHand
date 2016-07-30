@@ -10,25 +10,25 @@
 
             var self = this;
 
-            $('button.water').click(function() {
+            $('#water').click(function() {
                 self.type = "water";
                 self.requestData();
                 $("main").removeClass();
                 $("main").addClass("water");
             });
-            $('button.gas').click(function() {
+            $('#gas').click(function() {
                 self.type = "gas";
                 self.requestData();
                 $("main").removeClass();
                 $("main").addClass("gas");
             });
-            $('button.electricity').click(function() {
+            $('#electricity').click(function() {
                 self.type = "electricity";
                 self.requestData();
                 $("main").removeClass();
                 $("main").addClass("electricity");
             });
-            $('button.homelessness').click(function() {
+            $('#homelessness').click(function() {
                 self.type = "homelessness";
                 self.requestData();
                 $("main").removeClass();
@@ -95,7 +95,7 @@
                 ;
 
             this.map.setOptions({styles: styles});
-            $('button.water').click();
+            $('#water').click();
         },
 
         displayMarkers: function() {

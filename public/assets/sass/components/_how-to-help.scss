@@ -1,11 +1,14 @@
 #howToHelp {
-  padding: 20px;
+  padding: 40px;
 
   .help-method {
+
     display: inline-block;
     width: 200px;
     margin: 20px;
     height: 200px;
+    font-size: 1.1em;
+    font-weight: bold;
 
     .water & {
       @include water();
@@ -19,6 +22,7 @@
     .homelessness & {
       @include homelessness();
     }
+
   }
 
 }
