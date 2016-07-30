@@ -7,7 +7,8 @@
                 <div class="table-center">
                     {{--<img src="{{ FilePath::img('Helpin2.jpg') }}"/>--}}
                     <h1>One World, Many Problems<br/>
-                    <small>I love lamp</small></h1>
+                        <small>I love lamp</small>
+                    </h1>
                     <div id="div_userHelpContainer">
                         <a href="#map_section">
                             <div id="div_HowDoIHelp" class="col-lg-6 col-md-6 col-sm-12 text-center">
@@ -31,16 +32,16 @@
         <div class="map_filters affix-scroll">
             <ul>
                 <li>
-                    <button class="btn water-btn">Water</button>
+                    <button class="btn water">Water</button>
                 </li>
                 <li>
-                    <button class="btn gas-btn">Gas</button>
+                    <button class="btn gas">Gas</button>
                 </li>
                 <li>
-                    <button class="btn electricity-btn">Electricity</button>
+                    <button class="btn electricity">Electricity</button>
                 </li>
                 <li>
-                    <button class="btn homelessness-btn">Homelessness</button>
+                    <button class="btn homelessness">Homelessness</button>
                 </li>
             </ul>
         </div>
@@ -51,8 +52,26 @@
     </section>
 
     <section id="howToHelp">
+        <h1>How I can help . . .</h1>
         <div id="causes">
-            <h1>How I can help . . .</h1>
+            <div class="help-method">
+                <div class="table-wrapper">
+                    <div class="table-inner">
+                        <div class="table-center">
+                            Send Books
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="help-method">
+                <div class="table-wrapper">
+                    <div class="table-inner">
+                        <div class="table-center">
+                            Send Books
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

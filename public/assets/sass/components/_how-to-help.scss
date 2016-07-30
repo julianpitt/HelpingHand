@@ -1,4 +1,24 @@
 #howToHelp {
   padding: 20px;
-  
+
+  .help-method {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    height: 200px;
+
+    .water & {
+      @include water();
+    }
+    .gas & {
+      @include gas();
+    }
+    .electricity & {
+      @include electricity();
+    }
+    .homelessness & {
+      @include homelessness();
+    }
+  }
+
 }

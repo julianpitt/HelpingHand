@@ -10,21 +10,29 @@
 
             var self = this;
 
-            $('.water-btn').click(function() {
+            $('button.water').click(function() {
                 self.type = "water";
                 self.requestData();
+                $("main").removeClass();
+                $("main").addClass("water");
             });
-            $('.gas-btn').click(function() {
+            $('button.gas').click(function() {
                 self.type = "gas";
                 self.requestData();
+                $("main").removeClass();
+                $("main").addClass("gas");
             });
-            $('.electricity-btn').click(function() {
+            $('button.electricity').click(function() {
                 self.type = "electricity";
                 self.requestData();
+                $("main").removeClass();
+                $("main").addClass("electricity");
             });
-            $('.homelessness-btn').click(function() {
+            $('button.homelessness').click(function() {
                 self.type = "homelessness";
                 self.requestData();
+                $("main").removeClass();
+                $("main").addClass("homelessness");
             });
 
             this.map = new google.maps.Map(document.getElementById('map'), {
@@ -87,6 +95,7 @@
                 ;
 
             this.map.setOptions({styles: styles});
+            $('button.water').click();
         },
 
         displayMarkers: function() {
@@ -100,7 +109,7 @@
         },
         requestData: function() {
 
-            var baseUrl = "http://helpinghandap.ddns.net:11000/";
+            var baseUrl = "http://helpinghandapi.ddns.net:11000/";
             var zoom = this.map.getZoom();
             var center = this.map.getCenter();
             var lat = center.lat();
@@ -114,8 +123,16 @@
                 url: url,
                 dataType: 'JSON',
                 crossOrigin: true,
-                onSuccess: function(data) {
+
+                success: function(data, textStatus, jqXHR) {
                     console.log(data);
+                    if(data.status != "200") {
+                        return true;
+                    }
+
+                    data.dataUsageItem.forEach(function(object, index, array){
+                        console.log(object.lng, onject.lat);
+                    });
                     // this.removeMarkers();
                     // this.displayMarkers(data);
                 }

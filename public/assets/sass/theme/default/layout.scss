@@ -13,11 +13,15 @@ main {
 
   height: 100%;
   width: 100%;
+
   section {
+
     width: 100%;
     height: 100%;
     display: block;
+
   }
+
 }
 
 #section_header {
@@ -84,6 +88,7 @@ main {
     vertical-align: middle;
     .table-center {
       margin: auto;
+      text-align: center;
     }
   }
 }
@@ -93,4 +98,19 @@ main {
   top: 0;
   width: 100%;
   z-index: 10;
+}
+
+.btn {
+  &.water {
+    @include water();
+  }
+  &.gas {
+    @include gas();
+  }
+  &.electricity {
+    @include electricity();
+  }
+  &.homelessness {
+    @include homelessness();
+  }
 }
