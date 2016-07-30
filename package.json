@@ -1,0 +1,48 @@
+{
+  "name": "fiesta-events",
+  "version": "1.0.0",
+  "description": "Safi EMS Fiesta events re written from the ground up in laravel",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://julianpitt-admin@bitbucket.org/julianpitt-admin/fiest-events-laravel.git"
+  },
+  "keywords": [
+    "EMS",
+    "Events",
+    "Event",
+    "management"
+  ],
+  "author": "Unify Services and Prostart",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/julianpitt-admin/fiest-events-laravel#readme",
+  "private": true,
+  "dependencies": {
+    "laravel-elixir": "^5.0.0",
+    "bootstrap-sass": "^3.0.0"
+  },
+  "devDependencies": {
+    "del": "^0.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-concat": "^2.3.4",
+    "gulp-jshint": "^1.8.4",
+    "gulp-livereload": "^2.1.0",
+    "gulp-minify-css": "^0.3.7",
+    "gulp-notify": "^1.5.0",
+    "gulp-phpunit": "~0.9.1",
+    "gulp-plumber": "^0.6.5",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^0.3.1",
+    "lodash": "~3.10.1"
+  }
+}

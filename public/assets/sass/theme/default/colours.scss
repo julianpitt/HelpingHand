@@ -1,0 +1,33 @@
+//Bootstrap overrides
+// Basics of a navbar
+$navbar-height:                    60px;
+
+$navbar-border-radius:             0;
+$navbar-default-border:            0;
+$navbar-margin-bottom:             0;
+$navbar-padding-horizontal:        0;
+$navbar-default-color:             #c4cef2;
+$navbar-default-bg:                #151515;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color:                #cfcfcf;
+$navbar-default-link-hover-color:          #333;
+$navbar-default-link-hover-bg:             #EEE;
+$navbar-default-link-active-color:         #EEE;
+$navbar-default-link-active-bg:            lighten($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+$admin-sidemenu-bg: #363943;
+$admin-sidemenu-highlight: #35878c;

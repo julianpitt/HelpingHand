@@ -1,0 +1,29 @@
+/*
+Own custom files
+*/
+@import "public/assets/sass/custom_vars";
+@import "public/assets/sass/custom_mixins";
+@import "public/assets/sass/theme/default/bootvars";
+
+//Icons
+@import "public/assets/fonts/icomoon/style.scss";
+
+/*
+Vendor vars
+*/
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+/*
+Theme Files
+*/
+@import "public/assets/sass/theme/default/boot";
+
+/*
+Project Files
+*/
+@import "public/assets/sass/pages/_boot";
+
+/*
+Components
+*/
+@import "public/assets/sass/components/_boot";

@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oxygen', san-serif, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+main {
+
+  height: 100%;
+  width: 100%;
+  section {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+#section_header {
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+  background-image: url("/assets/img/wallhavenGradient.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 3em;
+
+  h1 {
+    font-size: 150%;
+    text-align: center;
+    color: white;
+  }
+  div#div_userHelpContainer {
+    width: 100%;
+    padding: 90px 0;
+
+    h1 small {
+      color: white !important;
+    }
+
+    div img {
+      padding: 40px;
+      border: solid 8px white;
+    }
+    div h3 {
+      padding: 20px 0;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: solid $alert-info-text 10px;
+      transition-duration: 0.5s;
+      background-color: $alert-info-bg;
+      color: #1092a1;
+      a > div {
+        max-width: 250px;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+
+    div h3:hover {
+      color: darken(#1092a1, 30.5%);
+      background-color: lighten(#d9edf7, 30.5%);
+    }
+  }
+
+}
+
+.table-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  .table-inner {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    .table-center {
+      margin: auto;
+    }
+  }
+}
+
+.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
