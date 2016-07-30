@@ -100,7 +100,7 @@
         },
         requestData: function() {
 
-            var baseUrl = "http://helpinghand.ddns.net:11000/";
+            var baseUrl = "http://helpinghandap.ddns.net:11000/";
             var zoom = this.map.getZoom();
             var center = this.map.getCenter();
             var lat = center.lat();
@@ -111,12 +111,8 @@
 
             $.ajax({
                 method: "GET",
-                data: '',
                 url: url,
                 dataType: 'JSON',
-                headers: {
-                    'Access-Control-Allow-Origin': '*'
-                },
                 crossOrigin: true,
                 onSuccess: function(data) {
                     console.log(data);
