@@ -75,7 +75,7 @@
         <h1>How I can help . . .</h1>
         <div id="causes">
             @foreach($types as $type)
-            <div class="help-method {{ $type->datatype->name }}">
+            <a href="{{url("/dashboard")}}" class="help-method {{ $type->datatype->name }}">
                 <div class="table-wrapper">
                     <div class="table-inner">
                         <div class="table-center">
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </section>

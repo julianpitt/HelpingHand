@@ -14,3 +14,4 @@
 Route::auth();
 
 Route::get('/', 'HomeController@index');
+Route::get('/dashboard', 'HomeController@dashboard');

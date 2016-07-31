@@ -29,4 +29,14 @@ class HomeController extends Controller
         $types = Action::with('datatype')->get();
         return view('home', compact('types'));
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }
