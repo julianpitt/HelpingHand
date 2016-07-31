@@ -1,0 +1,24 @@
++      o     +              o
+    +             o     +       +
+o          +
+    o  +           +        +
++        o     o       +        o
+-_-_-_-_-_-_-_,------,      o
+_-_-_-_-_-_-_-|   /\_/\
+-_-_-_-_-_-_-~|__( ^ .^)  +     +
+_-_-_-_-_-_-_-""  ""
++      o         o   +       o
+    +         +
+o        o         o      o     +
+    o           +
++      +     o        o      +
+
+Helping Hand Project - GovHack 2016
+Developed By: Team Teaming McTeam Face
+Developers
+ - James Anderson (jwanderson117@gmail.com)
+ - Thomas Mundy (thomas.mundy.001@gmail.com)
+ - Vito Sikrilic (vito.sik@live.com)
+ - Mothana Dabash (mothana.dabash@gmail.com)
+ - Julian Pittas (julian.pittas@gmail.com)
+ - Wei Wilson (bauwilsdesign@gmail.com)
