@@ -93,18 +93,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        var map;
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 4,
-                scrollwheel: false,
-                mapTypeControl: false
-            });
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDwr5jWedGA87GMdvxT2L6WkQ8VXIjqV0&callback=App.MapController.init"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDwr5jWedGA87GMdvxT2L6WkQ8VXIjqV0&callback=window.App.MapController.init&libraries=geometry,visualization"
             async defer></script>
 @endsection
