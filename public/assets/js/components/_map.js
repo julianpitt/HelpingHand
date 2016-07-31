@@ -33,7 +33,7 @@
                 $('.help-method.gas').show();
             });
             $('#electricity').click(function () {
-                self.type = "electricity";
+                self.type = "electr";
                 self.requestData();
                 $("main").removeClass();
                 $("main").addClass("electricity");
@@ -43,7 +43,7 @@
                 $('.help-method.electricity').show();
             });
             $('#homelessness').click(function () {
-                self.type = "homelessness";
+                self.type = "homele";
                 self.requestData();
                 $("main").removeClass();
                 $("main").addClass("homelessness");
@@ -173,9 +173,9 @@
                     return '#75B9E6';
                 case 'gas':
                     return '#FF8083';
-                case 'electricity':
+                case 'electr':
                     return '#FFCE6E';
-                case 'homelessness':
+                case 'homele':
                     return '#3D84D3';
             }
         }
