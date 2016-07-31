@@ -12,9 +12,10 @@ class CreateActionTable extends Migration
      */
     public function up()
     {
-        Schema::create('action', function (Blueprint $table) {
+        Schema::create('actions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->integer('data_type_id')->unsigned();
             $table->timestamps();
         });
     }

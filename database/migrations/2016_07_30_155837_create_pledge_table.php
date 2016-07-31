@@ -12,7 +12,7 @@ class CreatePledgeTable extends Migration
      */
     public function up()
     {
-        Schema::create('pledge', function (Blueprint $table) {
+        Schema::create('pledges', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('action_id')->unsigned();

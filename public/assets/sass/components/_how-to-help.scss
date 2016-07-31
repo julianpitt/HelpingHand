@@ -10,6 +10,14 @@
     font-size: 1.1em;
     font-weight: bold;
 
+    .table-center {
+      padding: 10px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
     .water & {
       @include water();
     }

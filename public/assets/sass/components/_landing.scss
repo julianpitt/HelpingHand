@@ -18,17 +18,27 @@
     }
   }
   .banner_title {
-    margin-bottom: 140px;
+    margin-bottom: 10px;
     display: block;
   }
+  .banner_subtitle {
+    margin-bottom: 120px;
+    font-size: 0.7em;
+    color: #c3c3c3;
+  }
+
   .banner-btn {
-    margin-top: 20px;
-    border: 4px solid white;
+    border-radius: 4px;
     display: block;
-    margin: auto;
+    margin: 20px auto auto auto;
     color: white;
     font-size: 0.6em;
     max-width: 340px;
-    padding: 20px;
+    padding: 40px 30px;
+    background-color: rgba(255,255,255,0.3);
+    &:hover {
+      background-color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
   }
 }

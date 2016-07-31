@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Action extends Model
 {
-    public function DataType() {
-        return $this->belongsTo('Datatype');
+    public function datatype() {
+        return $this->belongsTo('App\Models\DataType', 'data_type_id', 'id');
     }
     public function pledges() {
         return $this->hasMany('Pledges');

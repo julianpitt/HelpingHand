@@ -12,7 +12,7 @@ class CreateDataTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('datatype', function (Blueprint $table) {
+        Schema::create('data_types', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('url');
@@ -27,6 +27,6 @@ class CreateDataTypeTable extends Migration
      */
     public function down()
     {
-        Schema::drop('datatype');
+        Schema::drop('data_types');
     }
 }

@@ -19,6 +19,8 @@
                 $("main").addClass("water");
                 $('.btn-filter input[type=checkbox]').prop('checked', false);
                 $(this).prop('checked', true);
+                $('.help-method').hide();
+                $('.help-method.water').show();
             });
             $('#gas').click(function () {
                 self.type = "gas";
@@ -27,6 +29,8 @@
                 $("main").addClass("gas");
                 $('.btn-filter input[type=checkbox]').prop('checked', false);
                 $(this).prop('checked', true);
+                $('.help-method').hide();
+                $('.help-method.gas').show();
             });
             $('#electricity').click(function () {
                 self.type = "electricity";
@@ -35,6 +39,8 @@
                 $("main").addClass("electricity");
                 $('.btn-filter input[type=checkbox]').prop('checked', false);
                 $(this).prop('checked', true);
+                $('.help-method').hide();
+                $('.help-method.electricity').show();
             });
             $('#homelessness').click(function () {
                 self.type = "homelessness";
@@ -43,6 +49,8 @@
                 $("main").addClass("homelessness");
                 $('.btn-filter input[type=checkbox]').prop('checked', false);
                 $(this).prop('checked', true);
+                $('.help-method').hide();
+                $('.help-method.homelessness').show();
             });
 
             this.map = new google.maps.Map(document.getElementById('map'), {
@@ -52,57 +60,7 @@
                 mapTypeControl: false
             });
 
-            var styles =
-                    [{
-                        "featureType": "all",
-                        "elementType": "labels.text.fill",
-                        "stylers": [{"color": "#ffffff"}]
-                    }, {
-                        "featureType": "all",
-                        "elementType": "labels.text.stroke",
-                        "stylers": [{"color": "#000000"}, {"lightness": 13}]
-                    }, {
-                        "featureType": "administrative",
-                        "elementType": "geometry.fill",
-                        "stylers": [{"color": "#000000"}]
-                    }, {
-                        "featureType": "administrative",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{"color": "#144b53"}, {"lightness": 14}, {"weight": 1.4}]
-                    }, {
-                        "featureType": "landscape",
-                        "elementType": "all",
-                        "stylers": [{"color": "#176645"}]
-                    }, {
-                        "featureType": "poi",
-                        "elementType": "geometry",
-                        "stylers": [{"color": "#0c4152"}, {"lightness": 5}]
-                    }, {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.fill",
-                        "stylers": [{"color": "#176645"}]
-                    }, {
-                        "featureType": "road.highway",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{"color": "#176645"}, {"lightness": 25}]
-                    }, {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry.fill",
-                        "stylers": [{"visibility": "off"}]
-                    }, {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry.stroke",
-                        "stylers": [{"visibility": "off"}, {"lightness": 16}]
-                    }, {
-                        "featureType": "road.local",
-                        "elementType": "geometry",
-                        "stylers": [{"visibility": "off"}]
-                    }, {
-                        "featureType": "transit",
-                        "elementType": "all",
-                        "stylers": [{"color": "#146474"}]
-                    }, {"featureType": "water", "elementType": "all", "stylers": [{"color": "#021019"}]}]
-                ;
+            var styles = [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}];
 
             this.map.setOptions({styles: styles});
             $('#water').click();
@@ -131,12 +89,12 @@
         getCircle: function (latLng, magnitude, colour) {
             return new google.maps.Circle({
                 center: latLng,
-                radius: 80000,
+                radius: magnitude,
                 strokeColor: colour,
                 strokeOpacity: 0.8,
                 strokeWeight: .2,
                 fillColor: colour,
-                fillOpacity: .4,
+                fillOpacity: .7
             });
         },
 
@@ -178,7 +136,7 @@
             var lng = center.lng();
             var url = baseUrl + 'usage/get/' + lat + '/' + lng + "/" + zoom + "/" + this.type;
             var self = this;
-            console.log(url);
+
 
             $.ajax({
                 method: "GET",
@@ -187,14 +145,15 @@
                 crossOrigin: true,
 
                 success: function (data, textStatus, jqXHR) {
-                    console.log(data);
+
                     self.objects = [];
+
                     if (data.status != "200") {
                         return true;
                     }
 
                     data.dataUsageItem.forEach(function (object, index, array) {
-                        object.colour = 'red';
+                        object.colour = self.getColour();
                         self.objects.push(object);
                     });
 
@@ -202,9 +161,23 @@
                 }
             });
 
+        },
+
+        'getColour': function() {
+            switch(this.type) {
+                case 'water':
+                    return '#2E4A82';
+                case 'gas':
+                    return '#804143';
+                case 'electricity':
+                    return '#fff748';
+                case 'homelessness':
+                    return '#408046';
+            }
         }
 
     };
+
 
     window.App.MapController = MapController;
 

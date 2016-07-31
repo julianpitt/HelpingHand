@@ -10,9 +10,9 @@
             <div class="table-inner">
                 <div class="table-center">
                     {{--<img src="{{ FilePath::img('Helpin2.jpg') }}"/>--}}
-                    <h1 class="banner_title">One World, Many Problems<br/>
-                        <small>Lead the change</small>
+                    <h1 class="banner_title">Making a difference
                     </h1>
+                    <div class="banner_subtitle">One small change at a time</div>
                     <div id="div_userHelpContainer row">
                         <div id="div_HowDoIHelp" class="col-lg-6 col-md-6 col-xs-6 text-center">
                             <a href="#map_section" class="banner-btn">
@@ -67,32 +67,26 @@
 
                 </div>
             </div>
+            <a href="#howToHelp" class="map_help_out">See how you can help</a>
         </div>
     </section>
 
     <section id="howToHelp">
         <h1>How I can help . . .</h1>
         <div id="causes">
-            <div class="help-method">
+            @foreach($types as $type)
+            <div class="help-method {{ $type->datatype->name }}">
                 <div class="table-wrapper">
                     <div class="table-inner">
                         <div class="table-center">
-                            Send Books
+                            {{ $type->title }}
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="help-method">
-                <div class="table-wrapper">
-                    <div class="table-inner">
-                        <div class="table-center">
-                            Send Books
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </section>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDwr5jWedGA87GMdvxT2L6WkQ8VXIjqV0&callback=window.App.MapController.init&libraries=geometry,visualization"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDwr5jWedGA87GMdvxT2L6WkQ8VXIjqV0&callback=App.MapController.init&libraries=geometry,visualization"
             async defer></script>
 @endsection

@@ -39,14 +39,14 @@ main {
     font-size: 150%;
     text-align: center;
     color: white;
+    margin-bottom: 10px;
   }
+
   div#div_userHelpContainer {
     width: 100%;
     padding: 90px 0;
 
-    h1 small {
-      color: white !important;
-    }
+
 
     div img {
       padding: 40px;
@@ -102,15 +102,35 @@ main {
 
 .btn {
   &.water {
+    border: 0;
     @include water();
+    color: black;
+    background-color: lightgrey;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
   }
   &.gas {
+    border: 0;
     @include gas();
+    color: black;
+    background-color: lightgrey;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
   }
   &.electricity {
+    border: 0;
     @include electricity();
+    color: black;
+    background-color: lightgrey;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
   }
   &.homelessness {
+    border: 0;
     @include homelessness();
+    color: black;
+    background-color: lightgrey;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
   }
 }
