@@ -170,13 +170,13 @@
         'getColour': function() {
             switch(this.type) {
                 case 'water':
-                    return '#2E4A82';
+                    return '#75B9E6';
                 case 'gas':
-                    return '#804143';
+                    return '#FF8083';
                 case 'electricity':
-                    return '#fff748';
+                    return '#FFCE6E';
                 case 'homelessness':
-                    return '#408046';
+                    return '#3D84D3';
             }
         }
 

@@ -1,6 +1,5 @@
 @extends('layouts.subsites')
 @section('content')
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.min.js"></script>
 <div class="container subpage">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

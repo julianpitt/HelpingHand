@@ -5,7 +5,7 @@
                 <li><a href="{{url('/#howToHelp')}}">Solutions</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{url('/login')}}">Login</a></li>
+                <li><a href="{{url('/logout')}}">Logout</a></li>
             </ul>
         </div><!--/.nav-collapse -->
 </nav>
