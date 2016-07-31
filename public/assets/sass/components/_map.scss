@@ -77,6 +77,10 @@
     background: -webkit-linear-gradient(left,  rgba(52,228,106,1) 0%,rgba(117,185,230,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  rgba(52,228,106,1) 0%,rgba(117,185,230,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34e46a', endColorstr='#75b9e6',GradientType=1 ); /* IE6-9 */
+    img {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
 
   }
 

@@ -57,6 +57,9 @@
                 center: {lat: -28.8263257, lng: 133.3605215},
                 zoom: 5,
                 scrollwheel: false,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_CENTER
+                },
                 mapTypeControl: false
             });
 
@@ -137,7 +140,6 @@
             var url = baseUrl + 'usage/get/' + lat + '/' + lng + "/" + zoom + "/" + this.type;
             var self = this;
 
-
             $.ajax({
                 method: "GET",
                 url: url,
@@ -151,8 +153,10 @@
                     if (data.status != "200") {
                         return true;
                     }
-
+                    console.log("Rice review");
+                    console.log(data.dataUsageItem[0].riceReview);
                     data.dataUsageItem.forEach(function (object, index, array) {
+
                         object.colour = self.getColour();
                         self.objects.push(object);
                     });
